@@ -1,0 +1,17 @@
+# OSX stuff
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# OSX Thumbnails
+._*
+
+# OSX Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Installed node/gulp dependencies
+node_modules/
+
+# Client Dist
+dist
