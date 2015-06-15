@@ -1,7 +1,10 @@
 var Reflux = require('reflux');
 
 var ListActions = Reflux.createActions([
-  'createList'
+  'createList',
+  'loadLists',
+  'addToDo',
+  'updateToDo'
 ]);
 
 module.exports = ListActions;

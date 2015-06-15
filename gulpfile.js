@@ -16,6 +16,7 @@ gulp.task('html', function(){
 
 gulp.task('css', function(){
   gulp.src('assets/*.scss')
+    .pipe(concat('app.scss'))
     .pipe(sass())
     .pipe(gulp.dest('dist'));
 });

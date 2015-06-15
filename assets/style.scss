@@ -1,0 +1,29 @@
+#container {
+  section.lists {
+    section.list {
+      width: 25%;
+      float: left;
+      margin: 10px;
+      section.to_do {
+        border: 1px solid green;
+        &.checked {
+          span.checkbox {
+            background: blue;
+          }
+        }
+        span.checkbox {
+          display: inline-block;
+          background: red;
+          width: 15px;
+          height: 15px;
+        }
+        span.edit {
+          display: inline-block;
+          background: gray;
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+}
