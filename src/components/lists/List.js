@@ -4,6 +4,8 @@ var Reflux = require('reflux');
 var ListStore = require('../../stores/ListStore');
 var ListActions = require('../../actions/ListActions');
 
+var EditList = require('./EditList');
+
 var ToDo = require('../to_do/ToDo');
 var NewToDoForm = require('../to_do/NewToDoForm');
 
@@ -17,7 +19,7 @@ var List = React.createClass({
 
     return (
       <section className="list">
-        <h4>{this.props.data.title}</h4>
+        <EditList id={obj.props.data.id} title={obj.props.data.title} />
         <NewToDoForm list_id={this.props.data.id} />
         {renderedToDos}
       </section>

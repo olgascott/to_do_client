@@ -4,7 +4,10 @@ var ListActions = Reflux.createActions([
   'createList',
   'loadLists',
   'addToDo',
-  'updateToDo'
+  'updateToDo',
+  'deleteToDo',
+  'updateList',
+  'deleteList'
 ]);
 
 module.exports = ListActions;

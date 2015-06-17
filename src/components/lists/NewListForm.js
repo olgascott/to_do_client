@@ -26,7 +26,7 @@ var NewListForm = React.createClass({
     return (
       <section className="new_list_form">
         <form onSubmit={this._onSubmit} className="new_list">
-          <input type="text" name="title" placeholder="Title" autoComplete="off" onChange={this.onTitleChange} />
+          <input type="text" name="title" placeholder="Create new to do list" autoComplete="off" onChange={this.onTitleChange} />
           <button type="submit">Create</button>
         </form>
       </section>

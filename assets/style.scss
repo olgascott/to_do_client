@@ -1,29 +1,135 @@
+$light_gray: #f7f7f7;
+$dark_gray: #bababa;
+
+body {
+  background: $light_gray;
+  font-family: 'Helvetica', sans-serif;
+}
+
+// Common styles
+span.edit, span.delete {
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  margin-left: 5px;
+  width: 45px;
+  display: none;
+}
+
+section.list:hover {
+  section.list_controls {
+    span.edit, span.delete {
+      display: inline-block;
+    }
+  }
+}
+
+section.to_do:hover {
+  section.to_do_controls {
+    span.edit, span.delete {
+      display: inline-block;
+    }
+  }
+}
+
+span.edit {
+  color: #1fbf0d;
+}
+
+span.delete {
+  color: #f21111;
+}
+
+
+section.title_or_field {
+  display: inline-block;
+  padding: 0 10px;
+  h5 {
+    margin: 0;
+  }
+}
+
+// List Styles
 #container {
+  section.new_list_form {
+    padding: 10px;
+    text-align: center;
+    input {
+      margin-right: 10px;
+      width: 200px;
+    }
+  }
   section.lists {
     section.list {
-      width: 25%;
-      float: left;
-      margin: 10px;
-      section.to_do {
-        border: 1px solid green;
-        &.checked {
-          span.checkbox {
-            background: blue;
-          }
+      background: #fff;
+      width: 400px;
+      margin: 10px auto;
+      border-radius: 5px;
+      section.list_controls {
+        border-bottom: 1px solid $light_gray;
+        section.title_or_field {
+          width: 260px;
+          padding: 15px;
         }
-        span.checkbox {
+        h5 {
           display: inline-block;
-          background: red;
-          width: 15px;
-          height: 15px;
-        }
-        span.edit {
-          display: inline-block;
-          background: gray;
-          width: 15px;
-          height: 15px;
+          font-weight: normal;
+          width: 240px;
+          margin:0;
         }
       }
+    }
+  }
+}
+
+// ToDo Styles
+#container section.lists section.list section.new_to_do_form {
+  padding: 10px;
+  text-align: center;
+  input {
+    margin-right: 10px;
+    width: 200px;
+  }
+}
+#container section.lists section.list section.to_do {
+  border-top: 1px solid $light_gray;
+  position: relative;
+  &.checked {
+    span.checkbox {
+      span.icon {
+        display: inline-block;
+      }
+    }
+    section.to_do_controls {
+      h5 {
+        text-decoration: line-through;
+        color: $dark_gray;
+      }
+    }
+  }
+  section.to_do_controls {
+    display: inline-block;
+    margin: 10px 0 10px 30px;
+    section.title_or_field {
+      width: 240px;
+    }
+  }
+  span.checkbox {
+    display: block;
+    position: absolute;
+    top: 10px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid $dark_gray;
+    border-radius: 3px;
+    margin-left: 10px;
+    span.icon {
+      display: none;
+    }
+    svg {
+      width: 15px;
+      height: 15px;
+      fill: $dark_gray;
     }
   }
 }

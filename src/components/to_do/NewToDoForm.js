@@ -26,7 +26,7 @@ var NewToDoForm = React.createClass({
     return (
       <section className="new_to_do_form">
         <form onSubmit={this._onSubmit} className="new_to_do">
-          <input type="text" name="title" placeholder="Title" autoComplete="off" onChange={this.onTitleChange} />
+          <input type="text" name="title" placeholder="Create new to do" autoComplete="off" onChange={this.onTitleChange} />
           <button type="submit">Create</button>
         </form>
       </section>
