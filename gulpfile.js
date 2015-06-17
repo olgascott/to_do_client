@@ -52,4 +52,4 @@ gulp.task('watch', function() {
   .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['watch', 'server']);
+gulp.task('default', ['html', 'css', 'watch', 'server']);
