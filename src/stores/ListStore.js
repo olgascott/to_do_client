@@ -13,7 +13,7 @@ var ListStore = Reflux.createStore({
     var obj = this;
 
     reqwest({
-      url: "http://localhost:3000/api/1/lists",
+      url: "https://warm-basin-4232.herokuapp.com/api/1/lists",
       success: function (res) {
         obj.lists = res.lists;
         obj.trigger(obj.lists);
@@ -25,7 +25,7 @@ var ListStore = Reflux.createStore({
     var obj = this;
 
     reqwest({
-      url: "http://localhost:3000/api/1/lists",
+      url: "https://warm-basin-4232.herokuapp.com/api/1/lists",
       method: "POST",
       data: {title: data.title},
       success: function (res) {
@@ -39,7 +39,7 @@ var ListStore = Reflux.createStore({
     var obj = this;
 
     reqwest({
-      url: "http://localhost:3000/api/1/lists/" + listId,
+      url: "https://warm-basin-4232.herokuapp.com/api/1/lists/" + listId,
       method: "PUT",
       data: data,
       success: function (res) {
@@ -55,7 +55,7 @@ var ListStore = Reflux.createStore({
     var obj = this;
 
     reqwest({
-      url: "http://localhost:3000/api/1/lists/" + listId,
+      url: "https://warm-basin-4232.herokuapp.com/api/1/lists/" + listId,
       method: "DELETE",
       success: function (res) {
         var listIndex = _.findIndex(obj.lists, {id: listId});
@@ -70,7 +70,7 @@ var ListStore = Reflux.createStore({
     var obj = this;
 
     reqwest({
-      url: "http://localhost:3000/api/1/to_dos",
+      url: "https://warm-basin-4232.herokuapp.com/api/1/to_dos",
       method: "POST",
       data: {list_id: listId, title: title},
       success: function (res) {
@@ -91,7 +91,7 @@ var ListStore = Reflux.createStore({
     var obj = this;
 
     reqwest({
-      url: "http://localhost:3000/api/1/to_dos/" + toDoId,
+      url: "https://warm-basin-4232.herokuapp.com/api/1/to_dos/" + toDoId,
       method: "PUT",
       data: data,
       success: function (res) {
@@ -109,7 +109,7 @@ var ListStore = Reflux.createStore({
     var obj = this;
 
     reqwest({
-      url: "http://localhost:3000/api/1/to_dos/" + toDoId,
+      url: "https://warm-basin-4232.herokuapp.com/api/1/to_dos/" + toDoId,
       method: "DELETE",
       success: function (res) {
         var listIndex = _.findIndex(obj.lists, {to_dos: [{id: toDoId}]});
